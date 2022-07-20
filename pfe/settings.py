@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-5%xw_(j=1vgc_#6*j=e4b#fod1m1uc2jo-zrd*$*=g)-#z(_pp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eatfitness.heroku.com']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -128,7 +129,7 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+
 
 django_heroku.settings(locals())
 
