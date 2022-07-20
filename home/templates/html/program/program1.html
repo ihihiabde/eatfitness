@@ -1,0 +1,154 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Eat Fit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .paragraph12{
+        text-align:justify;
+        padding-left: 3cm;
+        padding-right: 3cm;
+        font-size: medium;
+      }
+    </style>
+	</head>
+
+	<body>
+	<section class="ftco-section">
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-between">
+				<div class="col-md-8 order-md-last">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" style="width: 170px; margin-left: 535px; margin-bottom: 5px; margin-top: -100px;"></a>
+						</div>				
+					</div>
+				</div>				
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid">	    
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav m-auto">
+	        	<li class="nav-item active"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="{% url 'back' %}">BACK</a>
+                <a class="dropdown-item" href="{% url 'chest' %}">CHEST</a>
+                <a class="dropdown-item" href="{% url 'arms' %}">ARMS</a>
+                <a class="dropdown-item" href="{% url 'shoulders' %}">SHOULDERS</a>
+                <a class="dropdown-item" href="{% url 'legs' %}">LEGS</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="{% url 'meal' %}" class="nav-link">Meal Planning</a></li>
+	        	<li class="nav-item"><a href="{% url 'calories' %}" class="nav-link">calories</a></li>
+            <li class="nav-item"><a href="{% url 'programs' %}" class="nav-link">PROGRAMS</a></li>
+	          <li class="nav-item"><a href="{% url 'contact_us' %}" class="nav-link">Contact us</a></li>            
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	</section>
+<!-- END nav -->
+<style>
+  .mySlides {display:none}
+  </style>
+          
+            <center>     
+              <h1>CORE STRENGTH</h1>
+          <br>
+          <br>
+              <img  src="{% static 'images/core1.jpg' %}" style="width: 50%;">
+            </center>
+          <br>
+          <br>
+        <div class="paragraph12">
+          <p>Core Strength is a no-equipment 30-day program that focuses primarily on strengthening abs and core. It’s suitable for all fitness levels and it requires very little time each day to complete making it an ideal add-on for any other fitness regimen you are already following. This program will help you define your abdominal wall and significantly improve your core.</p>
+          <p>To make each day’s routine more challenging and get better results, keep the plank during the plank sequences when you transition to the next move whenever possible - avoid dropping down to the floor. Do the same with exercises involving leg raises. Keep your legs up when doing leg holds and raised leg circles.</p>  
+          <p>Tips: When an exercise calls for a “10-count” it equals 10 seconds. When doing raised leg circles, change direction with each rep.</p>
+        </div>
+
+<!--downlod-->
+
+        <center class="download">   
+          <h1 style="color: rgb(45, 44, 44);">download our program</h1>  
+          <h5 style="color: rgb(42, 41, 41);">Click on the below text to download pdf file : </h5>  
+          <a href = "{% static 'images/core.pdf' %}">  
+           <b style="color: red;"> click here </b>  
+          </a>   
+          </center> 
+
+
+
+<br>	
+<br>
+<!---footer-->
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>Services</h3>
+                  <ul>
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'meal' %}">Meal Planning</a></li>
+                      <li><a href="{% url 'calories' %}">Calories</a></li>
+                      <li><a href="{% url 'programs' %}">Programs</a></li>
+                      <li><a href="{% url 'contact_us' %}">Contact us</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>Courses</h3>
+                <ul>
+                  <li><a href="{% url 'back' %}">BACK</a></li>
+                  <li><a href="{% url 'chest' %}">CHEST</a></li>
+                  <li><a href="{% url 'arms' %}">ARMS</a></li>
+                  <li><a href="{% url 'shoulders' %}">SHOULDERS</a></li>
+                  <li><a href="{% url 'legs' %}">LEGS</a></li>
+                </ul>
+
+              </div>
+              <div class="col-md-6 item text">
+                <h3>About</h3>
+                <ul>
+                    <li>PHONE: +212 629570454</li>
+                    <li>GMAIL: eat.fitness04@gmail</li>
+                    <li><a href="{% url 'contact_us' %}">Contact us</a></li>
+                </ul>
+              </div>
+              <div class="col item social" style="padding-left: 900px;">
+                <a href="https://www.facebook.com/profile.php?id=100081638986885">
+                <i class="icon ion-social-facebook"></i></a><a href="https://plus.google.com/+Paviliongift/posts">
+                <i class="icon ion-social-youtube"></i></a><a href="http://www.instagram.com/eatfit10">
+                <i class="icon ion-social-instagram"></i></a></div>
+          </div>
+      </div>
+  </footer>
+
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>
+

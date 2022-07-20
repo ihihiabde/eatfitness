@@ -1,0 +1,282 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="{% static './css/courses/SHOULDERS/shoulders3.css'%}">
+</head>
+<body>
+	<title>2 Blocks Template</title>
+	<main>
+		<div class="cd-image-block">
+			<ul class="cd-images-list">
+				<li class="is-selected">
+					<a href="#0">
+					</a>
+				</li>
+
+				<li>
+					<a href="#0">
+					</a>
+				</li>
+				
+				<li>
+					<a href="#0">
+					</a>
+				</li>
+			</ul> <!-- .cd-images-list -->
+		</div> <!-- .cd-image-block -->
+
+		<div class="cd-content-block">
+			<ul>
+				<li class="is-selected">
+					<div>
+						<button class="button-79" role="button" value="back" onclick="history.back()">Go back</button>
+						<h2>Bent over lateral raise</h2>
+						
+						<p>
+							- Primary muscle :  Lateral Deltoid
+						<br>
+							- Secondary muscles : Rhomboids, Trapezius
+						<br>
+							- Equipment: dumbbells
+						</p>
+						
+						
+						<h4>Bent over lateral raise Instructions</h4>
+						<p>
+							1.	Grab a set of dumbbells and bend your torso, until your chest is nearly parallel to the floor.
+							<br>
+							2.	Raise your arms out to the sides as you lift the dumbbells.
+							<br>
+							3.	Once both arms are parallel to the floor, pause, and then slowly lower them to the starting position.
+							<br>
+							4.	Repeat.
+			</p>
+						
+						<h4>Exercise Benefits</h4>
+						<p>
+							
+							•	Increase Size of the Posterior Deltoid. Larger rear deltoids is not just something that happens by chance.
+							<br>
+							•	Increased Pulling and Pushing Performance. 
+							<br>
+							•	Strengthen Shoulder Stabilizing Muscles.
+						</p>
+					</div> 
+				</li>
+
+				<li>
+					<div>
+						<button class="button-79" role="button" value="Go back!" onclick="history.back()">Go back</button>
+						<h2>Rear delt fly machine
+						</h2>
+						
+						<p>
+							- Primary muscle :  rear delt
+							
+						<br>
+							- Secondary muscles : none
+						<br>
+							- Equipment: Dumbbells
+						</p>
+						
+						<h4>Rear delt fly machine Instructions</h4>
+						<p>
+							1.	Sit on the pad facing the rear delt machine and plant your feet firmly on the ground. Your chest should be pressed up against the chest pad and your back should be straight.
+<br>
+							2.	Grab the inside horizontal handles with your palms facing down. Your arms should be slightly bent.
+<br>
+							3.	Contract your rear deltoids to bring the handles back until they are roughly in line with your shoulders. 
+<br>						
+							4.	Squeeze your rear delts hard in this position and slowly return to the starting position.
+							<br>
+							5.	Repeat.
+						</p>
+						
+						<h4>Exercise Benefits</h4>
+						<p>
+							•	Stronger Shoulders. The rear delt fly machine strengthens your shoulder muscles by developing your posterior deltoids. ...
+							<br>
+							•	Reduced Risk Of Injury. Compared to free weight exercises such as the bent over reverse fly, the rear delt fly machine provides far more stability. ...
+							<br>
+							•	Improved Posture	
+						</p>	
+					</div> 
+				</li>
+
+				<li>
+					<div>
+						<button class="button-79" role="button" value="Go back!" onclick="history.back()">Go back</button>
+						<h2>Band Pull Apart
+						</h2>
+
+						<p>
+							- Primary muscle :  rear delt
+						<br>
+							- Secondary Muscle Groups: Traps, Upper Back
+						<br>
+							- Equipment: dumbbells
+						</p>
+						
+						<h4>Band Pull Apart Instructions</h4>
+						<p>
+							1.	Set up in an athletic position with a band in both hands and your palms facing down.
+							<br>
+							2.	Lift the hands to shoulder height with the elbows extended.
+							<br>
+							3.	Exhale and pull the band apart until it nearly touches your chest.
+							<br>
+							4.	Slowly lower back to the starting position and repeat for the desired number of repetitions
+						</p>
+						
+						<h4>Exercise Benefits</h4>
+						<p>
+							Band pull-aparts can enhance your shoulder health and stability. With proper form, resistance band pull-aparts activate the stabilizer muscles around your shoulder joints, including rotator cuff muscles like the infraspinatus and teres minor. Band pull-aparts are easy to practice at home.
+	
+						</p>	
+					</div> 
+				</li>
+
+			</ul>
+
+			<button class="cd-close">Close</button>
+		</div> <!-- .cd-content-block -->
+
+		<ul class="block-navigation">
+			<li><button class="cd-prev inactive">&larr; Prev</button></li>
+			<li><button class="cd-next">Next &rarr;</button></li>
+		</ul> <!-- .block-navigation -->
+	</main>	<!-- .cd-main -->
+	
+<script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+    <script>
+        jQuery(document).ready(function($){
+	//store DOM elements
+	var imageWrapper = $('.cd-images-list'),
+		imagesList = imageWrapper.children('li'),
+		contentWrapper = $('.cd-content-block'),
+		contentList = contentWrapper.children('ul').eq(0).children('li'),
+		blockNavigation = $('.block-navigation'),
+		blockNavigationNext = blockNavigation.find('.cd-next'),
+		blockNavigationPrev = blockNavigation.find('.cd-prev'),
+		//used to check if the animation is running
+		animating = false;
+
+	//on mobile - open a single project content when selecting a project image
+	imageWrapper.on('click', 'a', function(event){
+		event.preventDefault();
+		var device = MQ();
+		
+		(device == 'mobile') && updateBlock(imagesList.index($(this).parent('li')), 'mobile');
+	});
+
+	//on mobile - close visible project when clicking the .cd-close btn
+	contentWrapper.on('click', '.cd-close', function(){
+		var closeBtn = $(this);
+		if( !animating ) {
+			animating = true;
+			
+			closeBtn.removeClass('is-scaled-up').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				contentWrapper.removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+					animating = false;
+				});
+
+				$('.cd-image-block').removeClass('content-block-is-visible');
+				closeBtn.off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+			});
+		}
+	});
+
+	//on desktop - update visible project when clicking the .block-navigation
+	blockNavigation.on('click', 'button', function(){
+		var direction = $(this),
+			indexVisibleblock = imagesList.index(imageWrapper.children('li.is-selected'));
+
+		if( !direction.hasClass('inactive') ) {
+			var index = ( direction.hasClass('cd-next') ) ? (indexVisibleblock + 1) : (indexVisibleblock - 1); 
+			updateBlock(index);
+		}
+	});
+
+	//on desktop - update visible project on keydown
+	$(document).on('keydown', function(event){
+		var device = MQ();
+		if( event.which=='39' && !blockNavigationNext.hasClass('inactive') && device == 'desktop') {
+			//go to next project
+			updateBlock(imagesList.index(imageWrapper.children('li.is-selected')) + 1);
+		} else if( event.which=='37' && !blockNavigationPrev.hasClass('inactive') && device == 'desktop' ) {
+			//go to previous project
+			updateBlock(imagesList.index(imageWrapper.children('li.is-selected')) - 1);
+		}
+	});
+
+	function updateBlock(n, device) {
+		if( !animating) {
+			animating = true;
+			var imageItem = imagesList.eq(n),
+				contentItem = contentList.eq(n);
+			
+			classUpdate($([imageItem, contentItem]));
+			
+			if( device == 'mobile') {
+				contentItem.scrollTop(0);
+				$('.cd-image-block').addClass('content-block-is-visible');
+				contentWrapper.addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+					contentWrapper.find('.cd-close').addClass('is-scaled-up');
+					animating = false;
+				});
+			} else {
+				contentList.addClass('overflow-hidden');
+				contentItem.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+					contentItem.siblings().scrollTop(0);
+					contentList.removeClass('overflow-hidden');
+					animating = false;
+				});
+			}
+
+			//if browser doesn't support transition
+			if( $('.no-csstransitions').length > 0 ) animating = false;
+
+			updateBlockNavigation(n);
+		}
+	}
+
+	function classUpdate(items) {
+		items.each(function(){
+			var item = $(this);
+			item.addClass('is-selected').removeClass('move-left').siblings().removeClass('is-selected').end().prevAll().addClass('move-left').end().nextAll().removeClass('move-left');
+		});
+	}
+
+	function updateBlockNavigation(n) {
+		( n == 0 ) ? blockNavigationPrev.addClass('inactive') : blockNavigationPrev.removeClass('inactive');
+		( n + 1 >= imagesList.length ) ? blockNavigationNext.addClass('inactive') : blockNavigationNext.removeClass('inactive');
+	}
+
+	function MQ() {
+		return window.getComputedStyle(imageWrapper.get(0), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "").split(', ');
+	}
+
+});
+    </script>
+</body>
+</html>
+
+
